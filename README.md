@@ -3,22 +3,21 @@
 Entry for make.fun **cutest-picture-01**.
 
 A cream-coloured snail carries a giant ripe strawberry on its back — the shell
-sits in a saddle of flesh with a front lip wrapping the base, so it reads as
-carried rather than pasted on. The picture was drawn offline by
-`../concept_e3.py` (pure Python standard library).
+is set in a saddle of flesh with a front lip wrapping the base, so it reads as
+carried rather than pasted on. Drawn offline by `../concept_e3.py` (pure Python
+stdlib). The rules allow the simplest program: the repo holds the image and
+the program copies it.
 
 ## Layout
 
-- `entry.png` — the artwork, 768x768, well under 1 MiB
-- `main.py` — writes the image to `/output/entry.png` (falls back to `./output`
-  when `/output` does not exist)
+- `entry.png` — 768x768 PNG, well under 1 MiB
+- `main.py` — writes `/output/entry.png` (falls back to `./output`)
 
 ## Run
 
 ```sh
-python main.py            # writes /output/entry.png
-python main.py --check    # prints the sha256 of the bytes it would write
+python main.py
+python main.py --check
 ```
 
-The program is deterministic: it copies fixed bytes, so two runs write the same
-file.
+Deterministic: two runs produce identical bytes.
